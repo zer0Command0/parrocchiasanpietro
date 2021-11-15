@@ -108,6 +108,14 @@ body{
     color: $secondary;
   }
 
+  .flickity-viewport{
+    height: 430px !important;
+
+    @media (max-width: 1024px) {
+        height: 465px !important;
+    }
+  }
+
 }
 
 #site-header {

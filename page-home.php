@@ -82,8 +82,8 @@ $whoWeAreId = get_field('pagina_chi_siamo');
             <div class="col-12 col-lg-6 px-3 text-center d-flex justify-content-center">
               <div class="card" style="width: 85% !important;">
                   <div class="card-body">
-                      <img src="<?php the_field('foto_parroco_1', $whoWeAreId);?>" alt="" class="rounded-circle py-4 profilePic">
-                      <h3 class="pt-3">Don <?php the_field('nome_parroco_1', $whoWeAreId); ?></h3>
+                      <img src="<?php the_field('foto_parroco_1', $whoWeAreId);?>" alt="" class="rounded-circle py-2 profilePic">
+                      <h3 class=""><?php the_field('nome_parroco_1', $whoWeAreId); ?></h3>
                       <h5 class="subtitle">Parroco</h5>
                       <hr class="divider">
                       <p><?php echo $descPriest1; ?></p>
@@ -94,8 +94,8 @@ $whoWeAreId = get_field('pagina_chi_siamo');
             <div class="col-12 col-lg-6 px-3 text-center d-flex justify-content-center">
                 <div class="card" style="width: 85% !important;">
                     <div class="card-body">
-                        <img src="<?php the_field('foto_parroco_2', $whoWeAreId);?>" alt="" class="rounded-circle py-4 profilePic">
-                        <h3 class="pt-3">Don <?php the_field('nome_parroco_2', $whoWeAreId); ?></h3>
+                        <img src="<?php the_field('foto_parroco_2', $whoWeAreId);?>" alt="" class="rounded-circle py-2 profilePic">
+                        <h3 class=""><?php the_field('nome_parroco_2', $whoWeAreId); ?></h3>
                         <h5 class="subtitle"> Vice Parroco</h5>
                         <hr class="divider">
                         <p><?php echo $descPriest2; ?></p>
