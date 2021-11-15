@@ -1,0 +1,25 @@
+{
+  "name": "psp_theme",
+  "description": "Custom theme built for Parrocchia San Pietro Theme",
+  "main": "",
+  "authors": [
+    "Automattic Theme Team"
+  ],
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flickity": "^2.2.2"
+  }
+}
