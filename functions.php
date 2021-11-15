@@ -184,7 +184,7 @@ function psp_theme_register_required_plugins() {
         array(
             'name'               => 'Advanced Custom Fields', // The plugin name.
             'slug'               => 'advanced-custom-fields', // The plugin slug (typically the folder name).
-            'source'             => get_template_directory() . '/required_plugins/advanced-custom-fields.5.10.2.zip', // The plugin source.
+            'source'             => 'https://downloads.wordpress.org/plugin/advanced-custom-fields.5.11.zip', // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
@@ -196,7 +196,7 @@ function psp_theme_register_required_plugins() {
         array(
             'name'               => 'Custom Post Type UI', // The plugin name.
             'slug'               => 'custom-post-type-ui', // The plugin slug (typically the folder name).
-            'source'             => get_template_directory() . '/required_plugins/custom-post-type-ui.1.10.0.zip', // The plugin source.
+            'source'             => 'https://downloads.wordpress.org/plugin/custom-post-type-ui.1.10.0.zip', // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
@@ -208,7 +208,7 @@ function psp_theme_register_required_plugins() {
         array(
             'name'               => 'Classic Editor', // The plugin name.
             'slug'               => 'classic-editor', // The plugin slug (typically the folder name).
-            'source'             => get_template_directory() . '/required_plugins/classic-editor.1.6.2.zip', // The plugin source.
+            'source'             => 'https://downloads.wordpress.org/plugin/classic-editor.1.6.2.zip', // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
@@ -220,7 +220,7 @@ function psp_theme_register_required_plugins() {
         array(
             'name'               => 'Font Awesome', // The plugin name.
             'slug'               => 'font-awesome', // The plugin slug (typically the folder name).
-            'source'             => get_template_directory() . '/required_plugins/font-awesome.4.0.4.zip', // The plugin source.
+            'source'             => 'https://downloads.wordpress.org/plugin/font-awesome.4.0.4.zip',
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
             'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
@@ -232,7 +232,19 @@ function psp_theme_register_required_plugins() {
 	    array(
 		    'name'               => 'The Events Calendar', // The plugin name.
 		    'slug'               => 'the-events-calendar', // The plugin slug (typically the folder name).
-		    'source'             => get_template_directory() . '/required_plugins/the-events-calendar.5.10.1.zip', // The plugin source.
+		    'source'             => 'https://downloads.wordpress.org/plugin/the-events-calendar.5.10.1.zip',
+		    'required'           => true, // If false, the plugin is only 'recommended' instead of required.
+		    'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+		    'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+		    'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+		    'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+		    'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+	    ),
+
+	    array(
+		    'name'               => 'Advaced custom field - Photo Gallery', // The plugin name.
+		    'slug'               => 'ACF - Photo Gallery', // The plugin slug (typically the folder name).
+		    'source'             => 'https://downloads.wordpress.org/plugin/navz-photo-gallery.zip', // The plugin source.
 		    'required'           => true, // If false, the plugin is only 'recommended' instead of required.
 		    'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 		    'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
@@ -240,8 +252,6 @@ function psp_theme_register_required_plugins() {
 		    'external_url'       => '', // If set, overrides default API URL and points to an external URL.
 		    'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 	    )
-
-
     );
 
     /*

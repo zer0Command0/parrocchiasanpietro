@@ -26,9 +26,12 @@ $whoWeAreId = get_field('pagina_chi_siamo');
 
 <section id="aboveTheFold" class="pt-1">
     <div class="slick-slider js-slick" style="overflow: hidden">
-        <div class="slider is-animating" style="background-image: url('<?php echo get_field('slider_home_1', $post->ID)?>');"></div>
-        <div class="slider " style="background-image: url('<?php echo get_field('slider_home_2', $post->ID)?>');"></div>
-        <div class="slider " style="background-image: url('<?php echo get_field('slider_home_3', $post->ID)?>');"></div>
+        <?php
+            $images = acf_photo_gallery('photo_gallery', $post->ID);
+            foreach ($images as $image){ ?>
+	            <div class="slider" style="background-image: url('<?php echo $image['full_image_url']; ?>')"></div>
+             <?php } ?>
+        
     </div>
     <div id="whoWeAre" class="container pt-4 pb-3">
         <?php if(!wp_is_mobile()){
@@ -39,33 +42,33 @@ $whoWeAreId = get_field('pagina_chi_siamo');
         <h3 class="title hr">Chi siamo</h3>
         <p class="pt-3"><?php echo $wording ?><a class="text-link" href="<?php echo get_permalink($whoWeAreId) ?>"> Scopri di più -></a></p>
     </div>
-</section>
-<section style="background: #fcfcfc">
     <div class="container pt-3 pb-5" id="latestposts">
 
         <h3 class="title hr pt-3 pb-4">Bacheca avvisi</h3>
 
         <div class="row post-carousel" data-flickity='{ "cellAlign" : "left" , "contain" : true , "prevNextButtons": <?php if(wp_is_mobile()) { echo 'true , "draggable" : false'; } else { echo 'false'; } ?>}'>
-            <?php foreach($latest_posts as $avvisi) {?>
-            <div class="col-12 col-lg-3 d-flex align-items-center justify-content-center py-2 slider-item">
-                <div class="card">
-                    <?php
-                    $title = $avvisi->post_title;
-                    $content = strip_tags($avvisi->post_content);
-                    $content = substr($content, 0, 50) . '[...]'; ?>
-                   <div class="card-header d-flex justify-content-center align-items-center">
-                   <h5 class="card-title"><?php echo $title ?></h5>
-                   </div>
-                   <div class="card-body"> 
-                        <p class="card-text"><?php echo $content ?></p>
-                        <a href="<?php echo $avvisi->guid; ?>" class="btn btn-card">Leggi il post</a>
+			<?php foreach($latest_posts as $avvisi) {?>
+                <div class="col-12 col-lg-3 d-flex align-items-center justify-content-center py-2 slider-item">
+                    <div class="card">
+						<?php
+						$title = $avvisi->post_title;
+						$content = strip_tags($avvisi->post_content);
+						$content = substr($content, 0, 50) . '[...]'; ?>
+                        <div class="card-header d-flex justify-content-center align-items-center">
+                            <h5 class="card-title"><?php echo $title ?></h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text"><?php echo $content ?></p>
+                            <a href="<?php echo $avvisi->guid; ?>" class="btn btn-card">Leggi il post</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <?php } ?>
+			<?php } ?>
         </div>
     </div>
-    <div class="container py-3">
+</section>
+<section style="background: #fcfcfc">
+    <div class="container py-3" id="priests">
 	    <?php
 	    if(wp_is_mobile()){
 		    $descPriest1 = substr(get_field('biografia_parroco_1' , $whoWeAreId), 0 , 95) . '[...]';
@@ -113,7 +116,7 @@ $whoWeAreId = get_field('pagina_chi_siamo');
 <?php get_footer(); ?>
 
 <script>
-        $(document).ready(function() {
+        jQuery(document).ready(function($) {
             let slider = $('.js-slick');
 
             slider.slick({

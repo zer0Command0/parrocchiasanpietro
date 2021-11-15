@@ -189,12 +189,13 @@ if( function_exists('acf_add_local_field_group') ):
 		'key' => 'group_618e7d9249213',
 		'title' => 'Homepage',
 		'fields' => array(
+
 			array(
-				'key' => 'field_618e7da40858e',
-				'label' => 'Slider Home 1',
-				'name' => 'slider_home_1',
-				'type' => 'url',
-				'instructions' => '',
+				'key' => 'field_6192bfa3928fc',
+				'label' => 'Photo gallery',
+				'name' => 'photo_gallery',
+				'type' => 'photo_gallery',
+				'instructions' => 'Scegli un massimo di 5 foto da mostrare nello slider iniziale della homepage',
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -202,41 +203,15 @@ if( function_exists('acf_add_local_field_group') ):
 					'class' => '',
 					'id' => '',
 				),
-				'default_value' => '',
-				'placeholder' => '',
-			),
-			array(
-				'key' => 'field_618e7ddb0858f',
-				'label' => 'Slider Home 2',
-				'name' => 'slider_home_2',
-				'type' => 'url',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
+				'fields[photo_gallery' => array(
+					'edit_modal' => 'Default',
+					'images_limit' => '5',
+					'remove_edit_button' => 'no',
+					'remove_delete_button' => 'No',
 				),
-				'default_value' => '',
-				'placeholder' => '',
+				'edit_modal' => 'Default',
 			),
-			array(
-				'key' => 'field_618e7dde08590',
-				'label' => 'Slider Home 3',
-				'name' => 'slider_home_3',
-				'type' => 'url',
-				'instructions' => '',
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array(
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'default_value' => '',
-				'placeholder' => '',
-			),
+
 			array(
 				'key' => 'field_6191743fd7d67',
 				'label' => 'Pagina Chi Siamo',
